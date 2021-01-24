@@ -3,32 +3,32 @@
 use CodeIgniter\Config\BaseConfig;
 
 class App extends BaseConfig
-{
+ {
 
-	/*
-	|--------------------------------------------------------------------------
-	| Base Site URL
-	|--------------------------------------------------------------------------
-	|
-	| URL to your CodeIgniter root. Typically this will be your base URL,
-	| WITH a trailing slash:
-	|
-	|	http://example.com/
-	|
-	| If this is not set then CodeIgniter will try guess the protocol, domain
-	| and path to your installation. However, you should always configure this
-	| explicitly and never rely on auto-guessing, especially in production
-	| environments.
-	|
-	*/
-	public $baseURL = 'http://localhost/codeigniter';
+    /*
+    |--------------------------------------------------------------------------
+    | Base Site URL
+    |--------------------------------------------------------------------------
+    |
+    | URL to your CodeIgniter root. Typically this will be your base URL,
+    | WITH a trailing slash:
+    |
+    |	http://example.com/
+    |
+    | If this is not set then CodeIgniter will try guess the protocol, domain
+    | and path to your installation. However, you should always configure this
+    | explicitly and never rely on auto-guessing, especially in production
+    | environments.
+    |
+    */
+    public $baseURL = 'http://localhost/codeigniter4';
 
-	/*
-	|--------------------------------------------------------------------------
-	| Index File
-	|--------------------------------------------------------------------------
-	|
-	| Typically this will be your index.php file, unless you've renamed it to
+    /*
+    |--------------------------------------------------------------------------
+    | Index File
+    |--------------------------------------------------------------------------
+    |
+    | Typically this will be your index.php file, unless you've renamed it to
 	| something else. If you are using mod_rewrite to remove the page set this
 	| variable so that it is blank.
 	|
@@ -154,9 +154,9 @@ class App extends BaseConfig
 	|	The location to save sessions to, driver dependent.
 	|
 	|	For the 'files' driver, it's a path to a writable directory.
-	|	WARNING: Only absolute paths are supported!
-	|
-	|	For the 'database' driver, it's a table name.
+    |	WARNING: Only absolute paths are supported!
+    |
+    |	For the 'database' driver, it's a table name.
 	|	Please read up the manual for the format with other session drivers.
 	|
 	|	IMPORTANT: You are REQUIRED to set a valid save path!
@@ -164,9 +164,9 @@ class App extends BaseConfig
 	| 'sessionMatchIP'
 	|
 	|	Whether to match the user's IP address when reading the session data.
-	|
-	|	WARNING: If you're using the database driver, don't forget to update
-	|	         your session table's PRIMARY KEY when changing this setting.
+    |
+    |	WARNING: If you're using the database driver, don't forget to update
+    |	         your session table's PRIMARY KEY when changing this setting.
 	|
 	| 'sessionTimeToUpdate'
 	|
@@ -220,50 +220,50 @@ class App extends BaseConfig
 	| IP addresses from which CodeIgniter should trust headers such as
 	| HTTP_X_FORWARDED_FOR and HTTP_CLIENT_IP in order to properly identify
 	| the visitor's IP address.
-	|
-	| You can use both an array or a comma-separated list of proxy addresses,
-	| as well as specifying whole subnets. Here are a few examples:
-	|
-	| Comma-separated:	'10.0.1.200,192.168.5.0/24'
-	| Array:		array('10.0.1.200', '192.168.5.0/24')
-	*/
-	public $proxyIPs = '';
+    |
+    | You can use both an array or a comma-separated list of proxy addresses,
+    | as well as specifying whole subnets. Here are a few examples:
+    |
+    | Comma-separated:	'10.0.1.200,192.168.5.0/24'
+    | Array:		array( '10.0.1.200', '192.168.5.0/24' )
+    */
+    public $proxyIPs = '';
 
-	/*
-	|--------------------------------------------------------------------------
-	| Cross Site Request Forgery
-	|--------------------------------------------------------------------------
-	| Enables a CSRF cookie token to be set. When set to TRUE, token will be
-	| checked on a submitted form. If you are accepting user data, it is strongly
-	| recommended CSRF protection be enabled.
-	|
-	| CSRFTokenName   = The token name
-	| CSRFHeaderName  = The header name
-	| CSRFCookieName  = The cookie name
-	| CSRFExpire      = The number in seconds the token should expire.
-	| CSRFRegenerate  = Regenerate token on every submission
-	| CSRFRedirect    = Redirect to previous page with error on failure
-	*/
-	public $CSRFTokenName  = 'csrf_test_name';
-	public $CSRFHeaderName = 'X-CSRF-TOKEN';
-	public $CSRFCookieName = 'csrf_cookie_name';
-	public $CSRFExpire     = 7200;
-	public $CSRFRegenerate = true;
-	public $CSRFRedirect   = true;
+    /*
+    |--------------------------------------------------------------------------
+    | Cross Site Request Forgery
+    |--------------------------------------------------------------------------
+    | Enables a CSRF cookie token to be set. When set to TRUE, token will be
+    | checked on a submitted form. If you are accepting user data, it is strongly
+    | recommended CSRF protection be enabled.
+    |
+    | CSRFTokenName   = The token name
+    | CSRFHeaderName  = The header name
+    | CSRFCookieName  = The cookie name
+    | CSRFExpire      = The number in seconds the token should expire.
+    | CSRFRegenerate  = Regenerate token on every submission
+    | CSRFRedirect    = Redirect to previous page with error on failure
+    */
+    public $CSRFTokenName  = 'csrf_test_name';
+    public $CSRFHeaderName = 'X-CSRF-TOKEN';
+    public $CSRFCookieName = 'csrf_cookie_name';
+    public $CSRFExpire     = 7200;
+    public $CSRFRegenerate = true;
+    public $CSRFRedirect   = true;
 
-	/*
-	|--------------------------------------------------------------------------
-	| Content Security Policy
-	|--------------------------------------------------------------------------
-	| Enables the Response's Content Secure Policy to restrict the sources that
-	| can be used for images, scripts, CSS files, audio, video, etc. If enabled,
-	| the Response object will populate default values for the policy from the
-	| ContentSecurityPolicy.php file. Controllers can always add to those
-	| restrictions at run time.
-	|
-	| For a better understanding of CSP, see these documents:
-	|   - http://www.html5rocks.com/en/tutorials/security/content-security-policy/
-	|   - http://www.w3.org/TR/CSP/
-	*/
-	public $CSPEnabled = false;
+    /*
+    |--------------------------------------------------------------------------
+    | Content Security Policy
+    |--------------------------------------------------------------------------
+    | Enables the Response's Content Secure Policy to restrict the sources that
+    | can be used for images, scripts, CSS files, audio, video, etc. If enabled,
+    | the Response object will populate default values for the policy from the
+    | ContentSecurityPolicy.php file. Controllers can always add to those
+    | restrictions at run time.
+    |
+    | For a better understanding of CSP, see these documents:
+    |   - http://www.html5rocks.com/en/tutorials/security/content-security-policy/
+    |   - http://www.w3.org/TR/CSP/
+    */
+    public $CSPEnabled = false;
 }
