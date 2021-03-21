@@ -14,7 +14,7 @@
         <h2>Generate PDF in Codeigniter from View</h2>
 
         <div class="d-flex flex-row-reverse bd-highlight">
-            <a href="<?php echo base_url('PdfController/htmlToPDF') ?>" class="btn btn-primary">
+            <a href="<?php echo base_url('Pdfreport/generatePDF') ?>" class="btn btn-primary">
                 Download PDF
             </a>
         </div>
