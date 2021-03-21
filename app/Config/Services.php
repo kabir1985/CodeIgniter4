@@ -1,4 +1,6 @@
-<?php namespace Config;
+<?php
+
+namespace Config;
 
 use CodeIgniter\Config\Services as CoreServices;
 
@@ -17,6 +19,8 @@ use CodeIgniter\Config\Services as CoreServices;
  */
 class Services extends CoreServices
 {
+
+	//$encrypter = \Config\Services::encrypter();
 
 	//    public static function example($getShared = true)
 	//    {

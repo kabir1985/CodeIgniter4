@@ -2,35 +2,40 @@
 <html lang="en">
 
 <head>
-  <meta name="description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
+  <meta name="description" content="Inventory Management System.">
   <!-- Twitter meta-->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:site" content="@pratikborsadiya">
   <meta property="twitter:creator" content="@pratikborsadiya">
   <!-- Open Graph Meta-->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Vali Admin">
-  <meta property="og:title" content="Vali - Free Bootstrap 4 admin theme">
-  <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
-  <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
-  <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
-  <title>Vali Admin - Free Bootstrap 4 Admin Template</title>
+  <meta property="og:site_name" content="Inventory Management System">
+  <meta property="og:title" content="Inventory Management System">
+  <meta property="og:url" content="Inventory Management System">
+  <meta property="og:image" content="Inventory Management System">
+  <meta property="og:description" content="Inventory Management System.">
+  <title>Inventory Management System</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Main CSS-->
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/main.css')?>">
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/animate.min.css')?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/main.css') ?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/animate.min.css') ?>">
+
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/select2.min.css') ?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/select2-bootstrap.css') ?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/invoice.css') ?>">
+
   <!-- Font-icon css-->
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body class="app sidebar-mini">
   <!-- Navbar-->
-  <?php echo $this->include("partial/navbar");?>
+  <?php echo $this->include("partial/navbar"); ?>
 
   <!-- Sidebar menu-->
-  <?php echo $this->include("partial/sidebar");?>
+  <?php echo $this->include("partial/sidebar"); ?>
 
   <main class="app-content">
     <?= $this->renderSection('content') ?>
@@ -38,15 +43,49 @@
 
 
   <!-- Essential javascripts for application to work-->
-  <script src="<?php echo base_url('assets/js/jquery-3.3.1.min.js')?>"></script>
-  <script src="<?php echo base_url('assets/js/popper.min.js')?>"></script>
-  <script src="<?php echo base_url('assets/js/bootstrap.min.js')?>"></script>
-  <script src="<?php echo base_url('assets/js/main.js')?>"></script>
+  <!-- <script src="<?php echo base_url('assets/js/jquery-2.2.3.min.js') ?>"></script> -->
+  <script src="<?php echo base_url('assets/js/jquery-3.3.1.min.js') ?>"></script>
+  <script src="<?php echo base_url('assets/js/popper.min.js') ?>"></script>
+  <script src="<?php echo base_url('assets/js/bootstrap.min.js') ?>"></script>
+  <script src="<?php echo base_url('assets/js/plugins/bootstrap-datepicker.min.js') ?>"></script>
+  <script src="<?php echo base_url('assets/js/plugins/select2.min.js') ?>"></script>
+  <script src="<?php echo base_url('assets/js/main.js') ?>"></script>
   <!-- The javascript plugin to display page loading on top-->
-  <script src="<?php echo base_url('assets/js/plugins/pace.min.js')?>"></script>
+  <script src="<?php echo base_url('assets/js/plugins/pace.min.js') ?>"></script>
 
 
-<?= $this->renderSection("scripts"); ?>
+  <script type='text/javascript'>
+    $(document).ready(function() {
+
+      if ($('.select2').length) {
+        $('.select2').select2({
+          theme: "bootstrap"
+          // placeholder: "Select Product",
+          // width: null,
+          //containerCssClass: ':all:'
+        });
+      }
+
+
+      if ($('.dataTable').length) {
+        $('.dataTable').DataTable();
+      }
+
+    });
+
+
+    function accept_digit_only(evt) {
+      var charCode = (evt.which) ? evt.which : event.keyCode
+      //alert(charCode);
+      if ((charCode >= 48 && charCode <= 57) || charCode == 8 || charCode == 46)
+        return true;
+
+      return false;
+    }
+  </script>
+
+
+  <?= $this->renderSection("scripts"); ?>
 
 </body>
 
